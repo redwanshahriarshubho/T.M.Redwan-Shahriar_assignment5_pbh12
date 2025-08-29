@@ -1,0 +1,42 @@
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #059669 0%, #064e3b 100%);
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.pulse-heart {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.badge {
+    background-color: #e5e7eb;
+    color: #374151;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
