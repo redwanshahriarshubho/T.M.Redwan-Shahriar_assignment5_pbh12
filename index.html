@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জরুরি সেবা নির্দেশিকা</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #059669 0%, #064e3b 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .nav-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+        .pulse-heart {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .badge {
+            background-color: #e5e7eb;
+            color: #374151;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Top Header -->
+    <div class="bg-gray-600 text-white text-center py-1">
+        <span class="text-sm">জরুরি সেবা</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm px-4 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+                <div>
+                    <span class="text-sm font-semibold text-gray-800">জরুরি সেবা</span><br>
+                    <span class="text-xs text-gray-600">নির্দেশিকা</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-1">
+                    <img src="assets/heart.png" alt="Heart" class="nav-icon">
+                    <span id="heartCount" class="text-sm">0</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <img src="assets/coin.png" alt="Coin" class="nav-icon">
+                    <span id="coinCount" class="text-sm">100</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-copy text-green-600 text-sm"></i>
+                    <span id="copyCount" class="text-sm">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <img src="assets/logo-dark.png" alt="Relevant Logo" class="w-16 h-16 mx-auto mb-4">
+            <h1 class="text-2xl font-bold mb-2">জরুরি সেবা নির্দেশিকা</h1>
+            <p class="text-sm">সরকারী জরুরি সেবাসমূহ আপনার হাতের মুঠোয় - গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের একটি প্রকল্প</p>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <section class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid lg:grid-cols-4 gap-6 md:grid-cols-1">
+            <!-- Emergency Cards Section -->
+            <div class="lg:col-span-3 grid md:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="জাতীয় জরুরি সেবা" class="service-icon">
+                        <button class="heart-btn" data-service="জাতীয় জরুরি সেবা">
+                            <img src="assets/heart.png" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">জাতীয় জরুরি সেবা</h3>
+                    <p class="text-xs text-gray-600 mb-2">National Emergency Number</p>
+                    <span class="badge block text-center">জরুরি</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">999</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="999">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="জাতীয় জরুরি সেবা" data-number="999">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/police.png" alt="পুলিশ" class="service-icon">
+                        <button class="heart-btn" data-service="পুলিশ">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">পুলিশ</h3>
+                    <p class="text-xs text-gray-600 mb-2">Police Helpline</p>
+                    <span class="badge block text-center">আইনশৃঙ্খলা</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">999</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="999">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="পুলিশ" data-number="999">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/fire-service.png" alt="ফায়ার সার্ভিস" class="service-icon">
+                        <button class="heart-btn" data-service="ফায়ার সার্ভিস">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">ফায়ার সার্ভিস</h3>
+                    <p class="text-xs text-gray-600 mb-2">Fire Service Number</p>
+                    <span class="badge block text-center">অগ্নিনির্বাপণ</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">999</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="999">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="ফায়ার সার্ভিস" data-number="999">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="অ্যাম্বুলেন্স" class="service-icon">
+                        <button class="heart-btn" data-service="অ্যাম্বুলেন্স">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">অ্যাম্বুলেন্স</h3>
+                    <p class="text-xs text-gray-600 mb-2">Ambulance Service</p>
+                    <span class="badge block text-center">চিকিৎসা</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">1994-999999</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="1994-999999">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="অ্যাম্বুলেন্স" data-number="1994-999999">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="নারী ও শিশু সহায়তা" class="service-icon">
+                        <button class="heart-btn" data-service="নারী ও শিশু সহায়তা">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">নারী ও শিশু সহায়তা</h3>
+                    <p class="text-xs text-gray-600 mb-2">Women & Child Helpline</p>
+                    <span class="badge block text-center">সহায়তা</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">109</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="109">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="নারী ও শিশু সহায়তা" data-number="109">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="দুর্নীতি দমন" class="service-icon">
+                        <button class="heart-btn" data-service="দুর্নীতি দমন">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">দুর্নীতি দমন</h3>
+                    <p class="text-xs text-gray-600 mb-2">Anti Corruption Helpline</p>
+                    <span class="badge block text-center">দুর্নীতি</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">106</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="106">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="দুর্নীতি দমন" data-number="106">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 7: Electricity -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="বিদ্যুৎ হটলাইন" class="service-icon">
+                        <button class="heart-btn" data-service="বিদ্যুৎ হটলাইন">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">বিদ্যুৎ হটলাইন</h3>
+                    <p class="text-xs text-gray-600 mb-2">Electricity Helpline</p>
+                    <span class="badge block text-center">উপকরণ</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">16216</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="16216">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="বিদ্যুৎ হটলাইন" data-number="16216">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 8: BRAC -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/brac.png" alt="বিআরএসি" class="service-icon">
+                        <button class="heart-btn" data-service="বিআরএসি">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">বিআরএসি</h3>
+                    <p class="text-xs text-gray-600 mb-2">BRAC Helpline</p>
+                    <span class="badge block text-center">সামাজিক সেবা</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">16406</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="16406">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="বিআরএসি" data-number="16406">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 9: Bangladesh Railway -->
+                <div class="bg-white rounded-lg shadow-sm border p-4 card-hover">
+                    <div class="flex justify-between items-start mb-3">
+                        <img src="assets/ambulance.png" alt="বাংলাদেশ রেলওয়ে" class="service-icon">
+                        <button class="heart-btn" data-service="বাংলাদেশ রেলওয়ে">
+                            <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1">বাংলাদেশ রেলওয়ে</h3>
+                    <p class="text-xs text-gray-600 mb-2">Bangladesh Railway</p>
+                    <span class="badge block text-center">পরিবহন</span>
+                    <div class="text-xl font-bold text-center py-2 mb-3 bg-gray-50 rounded">163</div>
+                    <div class="flex space-x-2">
+                        <button class="copy-btn flex-1 bg-gray-100 text-gray-700 py-1 px-2 rounded text-xs" data-number="163">
+                            <i class="fas fa-copy mr-1"></i>কপি
+                        </button>
+                        <button class="call-btn flex-1 bg-green-600 text-white py-1 px-2 rounded text-xs" data-service="বাংলাদেশ রেলওয়ে" data-number="163">
+                            <i class="fas fa-phone mr-1"></i>কল
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call History Section -->
+            <div class="bg-white rounded-lg shadow-sm border p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-semibold flex items-center text-gray-800">
+                        <i class="fas fa-history mr-2 text-blue-600"></i>কল ইতিহাস
+                    </h3>
+                    <button id="clearHistory" class="bg-red-500 text-white px-3 py-1 rounded text-xs hover:bg-red-600">
+                        পরিষ্কার করুন
+                    </button>
+                </div>
+                <div id="historyList" class="space-y-3">
+                    <!-- History items will be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let heartCount = 0;
+        let coinCount = 100;
+        let copyCount = 0;
+        let callHistory = [];
+
+        const heartCountEl = document.getElementById('heartCount');
+        const coinCountEl = document.getElementById('coinCount');
+        const copyCountEl = document.getElementById('copyCount');
+        const historyListEl = document.getElementById('historyList');
+        const clearHistoryBtn = document.getElementById('clearHistory');
+
+        function updateCounters() {
+            heartCountEl.textContent = heartCount;
+            coinCountEl.textContent = coinCount;
+            copyCountEl.textContent = copyCount;
+        }
+
+        document.querySelectorAll('.heart-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                heartCount++;
+                updateCounters();
+                btn.classList.add('pulse-heart');
+                setTimeout(() => btn.classList.remove('pulse-heart'), 1500);
+            });
+        });
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const number = btn.dataset.number;
+                navigator.clipboard.writeText(number).then(() => {
+                    copyCount++;
+                    updateCounters();
+                    alert(`নম্বর ${number} ক্লিপবোর্ডে কপি করা হয়েছে!`);
+                }).catch(() => {
+                    alert('কপি করতে ব্যর্থ হয়েছে।');
+                });
+            });
+        });
+
+        document.querySelectorAll('.call-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const service = btn.dataset.service;
+                const number = btn.dataset.number;
+                if (coinCount < 20) {
+                    alert('অপর্যাপ্ত কয়েন! কল করার জন্য কমপক্ষে ২০ কয়েন প্রয়োজন।');
+                    return;
+                }
+                coinCount -= 20;
+                alert(`কল করা হচ্ছে: ${service} (${number})`);
+                const time = new Date().toLocaleTimeString();
+                callHistory.push({ service, number, time });
+                updateCounters();
+                renderHistory();
+            });
+        });
+
+        function renderHistory() {
+            historyListEl.innerHTML = '';
+            if (callHistory.length === 0) {
+                historyListEl.innerHTML = '<p class="text-gray-500 text-center">কোনো কল ইতিহাস নেই</p>';
+                return;
+            }
+            callHistory.forEach(item => {
+                const div = document.createElement('div');
+                div.classList.add('bg-gray-50', 'p-2', 'rounded', 'text-xs');
+                div.innerHTML = `
+                    <div class="font-medium">${item.service}</div>
+                    <div>${item.number}</div>
+                    <div class="text-gray-500">${item.time}</div>
+                `;
+                historyListEl.appendChild(div);
+            });
+        }
+
+        clearHistoryBtn.addEventListener('click', () => {
+            callHistory = [];
+            renderHistory();
+        });
+
+        updateCounters();
+        renderHistory();
+    </script>
+</body>
+</html>
